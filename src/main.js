@@ -17,3 +17,22 @@ Vue.config.productionTip = false
 new Vue({
   render: h => h(App),
 }).$mount('#app')
+
+// const myEvent = new CustomEvent('search', {
+//   detail: {
+//     input: 'Gianni',
+//     age: 32,
+//     gender: 'fluid'
+//   }
+// });
+
+// document.body.addEventListener('search', (e) => {
+//   console.log(e);
+//   const detail = e.detail;
+//   const { age, gender, input } = detail;
+//   console.log(age, gender, input);
+// })
+
+// document.body.addEventListener('click', () => {
+//   document.body.dispatchEvent(myEvent) //dispatchEvent = spedisci evento
+// })
