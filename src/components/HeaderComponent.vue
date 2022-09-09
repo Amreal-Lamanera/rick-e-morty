@@ -7,8 +7,9 @@
         v-model="search"
         type="text"
         class="rounded"
-        @keyup="$emit('search', search)"
-      >
+        >
+        <!-- @keyup="$emit('search', search)" -->
+        <!-- @keyup="onChange" -->
     </div>
   </div>
 </template>
@@ -25,7 +26,20 @@
         listCharacters: [],
         search: ''
       }
-    }
+    },
+    // creo evento emit da un metodo e aggiungo un watcher a search per scatenarlo
+    watch: {
+      search: function(/*a,b*/){
+        // console.log('Nuovo valore: ', a, 'Valore precedente: ', b);
+        // this.onChange();
+        this.$emit('search', this.search)
+      }
+    },
+    // methods: {
+    //   onChange() {
+    //     // this.$emit('search', this.search)
+    //   }
+    // },
   }
 </script>
 
